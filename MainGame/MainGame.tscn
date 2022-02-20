@@ -7,20 +7,20 @@
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.9622, 380.576 )
+extents = Vector2( 20.6981, 398.561 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
 
 [node name="spaceinvaders clone " type="Control"]
-margin_left = 77.2318
-margin_top = -118.768
-margin_right = 1357.23
-margin_bottom = 601.232
+margin_top = 1.0
+margin_right = 1279.0
+margin_bottom = 721.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+countdownMax = 50
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -44,15 +44,14 @@ position = Vector2( -1.53629, 369.479 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
 position = Vector2( -5.37704, -0.768158 )
 shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Border_Right" type="Area2D" parent="." groups=[
 "right",
 ]]
 position = Vector2( 1287.42, 368.711 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
-shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 669.056 )

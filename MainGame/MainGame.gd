@@ -14,6 +14,9 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	$HUD/Countdown.text = str ("Gama Ovar")
+	
+func _process(delta):
+	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -37,6 +37,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CurrentScoreLabel" type="Label" parent="HUD"]
+margin_left = 4.0
+margin_top = 13.0
+margin_right = 90.0
+margin_bottom = 27.0
+text = "Current Score"
+
+[node name="CurrentScore" type="Label" parent="HUD"]
+margin_left = 94.0
+margin_top = 13.0
+margin_right = 94.0
+margin_bottom = 27.0
+
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
 ]]
@@ -55,7 +68,7 @@ __meta__ = {
 position = Vector2( 1287.42, 368.711 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 642.94, 669.056 )
+position = Vector2( 642.94, 617.379 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=[
 "top",
@@ -184,7 +197,7 @@ stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Were you blinded by its majesty" type="Sprite" parent="."]
-position = Vector2( 649.01, 370.657 )
+position = Vector2( 642.442, 357.826 )
 scale = Vector2( 0.68759, 0.745444 )
 z_index = -1
 texture = ExtResource( 6 )

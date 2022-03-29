@@ -13,7 +13,10 @@ func _ready():
 		$HUD/Countdown.text = str(currentTimer)
 		currentTimer = currentTimer - 1
 		print(currentTimer)
+	print ("Game Over")
 	$HUD/Countdown.text = str ("Gama Ovar")
+	
+	get_tree().change_scene("res://Endscene.tscn")
 	
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])

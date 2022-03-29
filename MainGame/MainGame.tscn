@@ -21,7 +21,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-countdownMax = 50
+countdownMax = 5
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -61,11 +61,6 @@ shape = SubResource( 1 )
 __meta__ = {
 "_editor_description_": ""
 }
-
-[node name="Border_Right" type="Area2D" parent="." groups=[
-"right",
-]]
-position = Vector2( 1287.42, 368.711 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 617.379 )

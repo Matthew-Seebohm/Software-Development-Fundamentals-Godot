@@ -16,14 +16,9 @@ func _ready():
 #	pass
 
 
-
-
-
-func _on_Button_pressed():
-	GlobalVariables.scoringInformation["currentScore"] = 0
+func _on_Start_Game_pressed():
 	get_tree().change_scene("res://MainGame/MainGame.tscn")
 
 
-func _on_Button2_pressed():
-	GlobalVariables.scoringInformation["currentScore"] = 0
-	get_tree().change_scene("res://Main Menu.tscn")
+func _on_Quit_pressed():
+	get_tree().quit()

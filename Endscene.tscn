@@ -1,17 +1,38 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Button.gd" type="Script" id=1]
+[ext_resource path="res://Button2.gd" type="Script" id=2]
+[ext_resource path="res://MasterChiefDead.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="MasterChiefDead" type="Sprite" parent="."]
+position = Vector2( 638.013, 369.957 )
+scale = Vector2( 2.05985, 2.13888 )
+z_index = -1
+texture = ExtResource( 3 )
+
 [node name="Button" type="Button" parent="."]
-margin_left = 319.015
-margin_top = 243.381
-margin_right = 596.015
-margin_bottom = 394.381
+margin_left = 484.969
+margin_top = 208.712
+margin_right = 761.969
+margin_bottom = 359.712
 text = "Restart"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 487.329
+margin_top = 368.429
+margin_right = 765.329
+margin_bottom = 468.429
+text = "Main Menu"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="toggled" from="Button" to="Button" method="_on_Button_toggled"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_Button2_pressed"]

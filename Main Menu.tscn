@@ -31,6 +31,8 @@ size_flags_horizontal = 3
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Layout/Title"]
+anchor_top = 0.947
+anchor_bottom = 0.947
 margin_left = 316.0
 margin_right = 963.0
 margin_bottom = 45.0

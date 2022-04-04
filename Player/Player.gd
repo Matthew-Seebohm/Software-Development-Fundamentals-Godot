@@ -28,3 +28,4 @@ func _process(delta):
 		var bulletInstance = bulletSource.instance()
 		bulletInstance.position = Vector2(position.x, position.y-50)
 		get_tree().get_root().add_child(bulletInstance)
+		yield(get_tree().create_timer(2.0), "timeout")

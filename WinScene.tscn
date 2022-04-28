@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Button2.gd" type="Script" id=1]
+[ext_resource path="res://retry button.gd" type="Script" id=2]
+[ext_resource path="res://Were you blinded by its majesty.jpg" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 609.263
+margin_top = 179.221
+margin_right = 856.263
+margin_bottom = 283.221
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+text = "Congrats"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="retry button" type="Button" parent="."]
+margin_left = 536.68
+margin_top = 219.558
+margin_right = 736.68
+margin_bottom = 334.558
+text = "retry"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 538.0
+margin_top = 340.0
+margin_right = 736.0
+margin_bottom = 458.0
+text = "main menu"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Were you blinded by its majesty" type="Sprite" parent="."]
+position = Vector2( 638.683, 360.988 )
+scale = Vector2( 0.698259, 0.73885 )
+z_index = -2
+texture = ExtResource( 3 )
+[connection signal="pressed" from="retry button" to="retry button" method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

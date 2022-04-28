@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://Were you blinded by its majesty.jpg" type="Texture" id=6]
+[ext_resource path="res://Enemy/Bullet_Enemy.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.6981, 398.561 )
@@ -21,7 +22,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-countdownMax = 5
+countdownMax = 30
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -56,7 +57,19 @@ margin_bottom = 27.0
 position = Vector2( -1.53629, 369.479 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
+position = Vector2( -13.7279, -12.4595 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Border_Right" type="Area2D" parent="." groups=[
+"right",
+]]
+position = Vector2( 1291.6, 334.572 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
+position = Vector2( 9.66528, 29.0138 )
 shape = SubResource( 1 )
 __meta__ = {
 "_editor_description_": ""
@@ -93,6 +106,7 @@ script = ExtResource( 5 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 226.241, 73.6566 )
+script = ExtResource( 7 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 332.707, 74.3564 )
@@ -192,7 +206,7 @@ stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Were you blinded by its majesty" type="Sprite" parent="."]
-position = Vector2( 642.442, 357.826 )
+position = Vector2( 657.474, 356.156 )
 scale = Vector2( 0.68759, 0.745444 )
 z_index = -1
 texture = ExtResource( 6 )

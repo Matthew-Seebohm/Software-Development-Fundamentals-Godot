@@ -16,13 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_Start_Game_pressed():
-	get_tree().change_scene("res://MainGame/MainGame.tscn")
-
-
-func _on_Quit_pressed():
-	get_tree().quit()
-
-
-func _on_Options_pressed():
-	get_tree().change_scene("res://Options.tscn")
+func _on_Back_pressed():
+	get_tree().change_scene("res://Main Menu.tscn")

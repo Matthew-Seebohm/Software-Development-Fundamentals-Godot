@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Back.gd" type="Script" id=1]
+[ext_resource path="res://dontworryaboutit.jpeg" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Back" type="Button" parent="."]
+margin_left = 446.65
+margin_top = 293.596
+margin_right = 778.65
+margin_bottom = 441.596
+text = "back"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dontworryaboutit" type="Sprite" parent="."]
+position = Vector2( 608.683, 276.94 )
+z_index = -1
+texture = ExtResource( 2 )
+[connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]

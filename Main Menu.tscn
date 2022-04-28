@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Were you blinded by its majesty.jpg" type="Texture" id=1]
 [ext_resource path="res://Start Game.gd" type="Script" id=2]
 [ext_resource path="res://Halo v2.png" type="Texture" id=3]
 [ext_resource path="res://Quit.gd" type="Script" id=4]
+[ext_resource path="res://Options.gd" type="Script" id=5]
 
 [node name="Main menu" type="Control"]
 anchor_right = 1.0
@@ -31,8 +32,6 @@ size_flags_horizontal = 3
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Layout/Title"]
-anchor_top = 0.947
-anchor_bottom = 0.947
 margin_left = 316.0
 margin_right = 963.0
 margin_bottom = 45.0
@@ -70,6 +69,7 @@ margin_top = 340.0
 margin_right = 1280.0
 margin_bottom = 360.0
 text = "Options"
+script = ExtResource( 5 )
 
 [node name="Credits" type="HBoxContainer" parent="Layout"]
 margin_top = 706.0
@@ -84,3 +84,4 @@ margin_bottom = 14.0
 text = "Copyright Cyclonicfish686"
 [connection signal="pressed" from="Layout/Main/VBoxContainer/Start Game" to="Layout/Main/VBoxContainer/Start Game" method="_on_Start_Game_pressed"]
 [connection signal="pressed" from="Layout/Main/VBoxContainer/Quit" to="Layout/Main/VBoxContainer/Start Game" method="_on_Quit_pressed"]
+[connection signal="pressed" from="Layout/Main/VBoxContainer/Options" to="Layout/Main/VBoxContainer/Start Game" method="_on_Options_pressed"]

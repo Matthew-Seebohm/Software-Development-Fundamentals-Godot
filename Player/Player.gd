@@ -26,6 +26,6 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_just_pressed("fire"):
 		var bulletInstance = bulletSource.instance()
-		bulletInstance.position = Vector2(position.x, position.y-50)
+		bulletInstance.position = Vector2(position.x, position.y -65)
 		get_tree().get_root().add_child(bulletInstance)
 		yield(get_tree().create_timer(2.0), "timeout")

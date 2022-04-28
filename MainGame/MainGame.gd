@@ -16,7 +16,14 @@ func _ready():
 	print ("Game Over")
 	$HUD/Countdown.text = str ("Gama Ovar")
 	
-	get_tree().change_scene("res://Endscene.tscn")
+	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
+	print(GlobalVariables.previousScores)
+	
+	if GlobalVariables.scoringInformation["currentScore"] >= 320:
+		get_tree().change_scene("res://WinScene.tscn")
+	
+	if GlobalVariables.scoringInformation["currentScore"] < 320:
+		get_tree().change_scene("res://Endscene.tscn") 
 	
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])

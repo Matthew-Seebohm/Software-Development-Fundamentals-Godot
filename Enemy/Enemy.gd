@@ -29,5 +29,5 @@ func _process(delta):
 	if GlobalVariables.enemyBulletInstanceCount < 5:
 		var bulletInstance = bullet.instance()
 		
-		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
+		bulletInstance.position = Vector2(global_position.x, global_position.y +5)
 		get_tree().get_root().add_child(bulletInstance)

@@ -3,6 +3,7 @@ extends KinematicBody2D
 var movement_speed = 400
 var vertical_speed = 0
 var bulletSource = preload ("res://Bullet/Bullet.tscn")
+var speed = 500
 
 
 func _ready():
@@ -22,6 +23,7 @@ func _physics_process(delta):
 		move_and_collide(Vector2(movement_speed * delta, 0))
 	if position.x >= 1250:
 		move_and_collide(Vector2(-movement_speed * delta, 0))
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("fire"):

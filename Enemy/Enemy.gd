@@ -1,30 +1,26 @@
 extends KinematicBody2D
+#this script is for controlling the enemies movement, bullets and speed
 
 var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn")
 
-
-	
+#This function connects the enemies together in groups
 func _ready():
 	$Area2D.connect("area_entered", self, "_colliding")
-	
 
+#This function detirmines the horizontal and vertical movement of the enemies
 func _colliding(area):
 	if area.is_in_group("right"):
-		#print("emenies collide right")
 		get_parent().global_position.y += 10
 		get_parent().speed = -200
 	if area.is_in_group("left"):
-		#print("emenies collide left")
 		get_parent().global_position.y += 10
 		get_parent().speed = 200
 
-
+#this function uses a random number generator (rng) to tell when the enemie to shoot
 func _process(delta):
-#	while (true):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(2.0, 30.0)
-	#print("time: ",my_random_number)
 	yield(get_tree().create_timer(my_random_number), "timeout")
 	if GlobalVariables.enemyBulletInstanceCount < 5:
 		var bulletInstance = bullet.instance()

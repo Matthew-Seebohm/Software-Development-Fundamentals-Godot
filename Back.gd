@@ -1,20 +1,16 @@
 extends Button
+#This script is for activating a harder difficulty, by setting the switch as false when the game opens,
+#when the player flips the switch it allows the game to run through a series of decisions to allow the enemies
+# to move faster and shoot more
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$PAIN.pressed = GlobalVariables.pain
+	print ("here")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+#This sends the player bakc to the main menu from the options menu
 func _on_Back_pressed():
 	get_tree().change_scene("res://Main Menu.tscn")
+
+#The famous "Pain Difficulty" 
+func _on_Pain_Just_pain_toggled(button_pressed):
+	GlobalVariables.pain = button_pressed

@@ -1,28 +1,17 @@
 extends Button
+#This script allows the main menu buttons to send the player t different parts of the game
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+#This button sends the player to the game from the mainmenu
 func _on_Start_Game_pressed():
 	get_tree().change_scene("res://MainGame/MainGame.tscn")
 
-
+#This button quits the entire project
 func _on_Quit_pressed():
 	get_tree().quit()
 
-
+#Ths button sends the player to the otions menu
 func _on_Options_pressed():
-	get_tree().change_scene("res://Options.tscn")
+	get_tree().change_scene("res://Options.tscn") 

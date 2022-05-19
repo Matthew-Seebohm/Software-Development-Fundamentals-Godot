@@ -1,6 +1,9 @@
 extends Node
+#this script is for adding global variables, variable that are usable by any script
 
-var bulletInstanceCount = 0 # Keeps track of how many bullet instances are current
+var pain = false
+
+var bulletInstanceCount = 0 
 var enemyBulletInstanceCount = 0
 
 

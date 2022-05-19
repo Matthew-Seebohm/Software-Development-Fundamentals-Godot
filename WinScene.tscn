@@ -7,22 +7,22 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-margin_left = 609.263
-margin_top = 179.221
-margin_right = 856.263
-margin_bottom = 283.221
+margin_left = 473.0
+margin_top = 199.0
+margin_right = 933.0
+margin_bottom = 283.0
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.0
-text = "Congrats"
+text = "Congrats, play again to keep your score to increase"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="retry button" type="Button" parent="."]
-margin_left = 536.68
-margin_top = 219.558
-margin_right = 736.68
-margin_bottom = 334.558
+margin_left = 538.0
+margin_top = 222.0
+margin_right = 737.0
+margin_bottom = 334.0
 text = "retry"
 script = ExtResource( 2 )
 __meta__ = {
@@ -41,7 +41,7 @@ __meta__ = {
 }
 
 [node name="Were you blinded by its majesty" type="Sprite" parent="."]
-position = Vector2( 638.683, 360.988 )
+position = Vector2( 638.683, 362.42 )
 scale = Vector2( 0.698259, 0.73885 )
 z_index = -2
 texture = ExtResource( 3 )

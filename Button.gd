@@ -1,29 +1,17 @@
 extends Button
+#This script is for the button sin the retry scene
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-
-
-
+#this function sends the player to the "MainGame" scene if pressed
+#it also resets the score when pressed
 func _on_Button_pressed():
 	GlobalVariables.scoringInformation["currentScore"] = 0
 	get_tree().change_scene("res://MainGame/MainGame.tscn")
 
-
+#This fuction sends the player back to the "Main Menu" scene if pressed
+#it also resets the score when pressed
 func _on_Button2_pressed():
 	GlobalVariables.scoringInformation["currentScore"] = 0
 	get_tree().change_scene("res://Main Menu.tscn")

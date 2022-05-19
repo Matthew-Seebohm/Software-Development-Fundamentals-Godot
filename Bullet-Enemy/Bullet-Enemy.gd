@@ -1,20 +1,20 @@
 extends KinematicBody2D
+#This script runs for each bullet fired by the enemies
 
 var speed = 500
 
-# Called when the node enters the scene tree for the first time.
+#This fuction detirmines if the enemy applies to the physics
 func _ready():
 	GlobalVariables.enemyBulletInstanceCount += 1
 	set_physics_process(true)
 
-
+#This code detects if the bullet collides with either an enemy or player
+# if it's an enemy it disregards it, but if it's a player it sends the player to the endscene
 func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, +speed*delta*0.4))
 	if (collidedObject):
-		#print("Enemy collide: ",collidedObject.collider.name)
 		if "Enemy" in collidedObject.collider.name:
 			pass
-			#collidedObject.get_collider().queue_free() #Don't kill the enemies.
 		else:
 			queue_free()
 			GlobalVariables.enemyBulletInstanceCount -= 1

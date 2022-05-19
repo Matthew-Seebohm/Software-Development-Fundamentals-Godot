@@ -13,10 +13,11 @@ extents = Vector2( 20.6981, 398.561 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
 
-[node name="spaceinvaders clone " type="Control"]
-margin_top = 1.0
-margin_right = 1279.0
-margin_bottom = 721.0
+[node name="bootleg space invaders" type="Control"]
+margin_left = -0.768188
+margin_top = 1.23187
+margin_right = 1279.23
+margin_bottom = 721.232
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
